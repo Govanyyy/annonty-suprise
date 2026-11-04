@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#8f163d">
+<title>إلى اننونتى ❤️</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Amiri:wght@400;700&display=swap');
+:root{--wine:#781633;--rose:#d94370;--pink:#ffb6c9;--cream:#fff5f6;--ink:#4b1729}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;font-family:'Cairo',sans-serif;color:var(--ink);background:radial-gradient(circle at 15% 15%,#ffe0e8,transparent 32%),radial-gradient(circle at 85% 80%,#ffd4df,transparent 30%),linear-gradient(135deg,#fff7f8,#ffe9ef);overflow-x:hidden}
+button,input{font:inherit}
+button{cursor:pointer}
+.hearts{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:0}
+.heart{position:absolute;bottom:-50px;color:#e65c83;opacity:.22;animation:floatUp linear infinite}
+@keyframes floatUp{to{transform:translateY(-115vh) rotate(35deg);opacity:0}}
+.wrap{position:relative;z-index:1;width:min(900px,92%);margin:auto;padding:28px 0 60px}
+.top{text-align:center;margin:18px 0 24px}
+.eyebrow{letter-spacing:2px;color:#a13b5c;font-size:.78rem;font-weight:700}
+h1{font-family:'Amiri',serif;font-size:clamp(2.5rem,8vw,4.4rem);line-height:1.2;color:var(--wine);margin:8px 0}
+.subtitle{color:#8e5266;margin:0}
+.panel{background:rgba(255,255,255,.76);border:1px solid rgba(255,255,255,.9);border-radius:28px;padding:clamp(22px,5vw,42px);box-shadow:0 20px 60px rgba(120,22,51,.12);backdrop-filter:blur(12px)}
+.lock{max-width:560px;margin:0 auto;text-align:center}
+.big-heart{font-size:3rem;filter:drop-shadow(0 8px 10px #ef9ab4)}
+h2{color:var(--wine);margin:10px 0}
+.note{color:#87566a;line-height:1.9}
+.password-row{display:flex;gap:10px;margin:22px 0 10px}
+.password-row input{flex:1;min-width:0;border:1px solid #edb4c5;background:#fffafb;border-radius:15px;padding:14px 16px;outline:none}
+.password-row input:focus{border-color:var(--rose);box-shadow:0 0 0 3px #f9d5df}
+.primary{border:0;border-radius:15px;padding:13px 22px;color:white;font-weight:800;background:linear-gradient(135deg,#a51e4e,#e44d7c);box-shadow:0 8px 20px #c84c7550;transition:.2s}
+.primary:hover{transform:translateY(-2px);filter:brightness(1.05)}
+.error{min-height:28px;color:#b4234f;font-size:.9rem}
+.hidden{display:none!important}
+.hero{text-align:center;padding:18px 0 28px}
+.hero .script{font-family:'Amiri',serif;font-size:clamp(2.2rem,7vw,3.7rem);color:var(--wine);margin:0}
+.hero p{color:#87566a;line-height:1.9}
+.section{margin-top:22px}
+.section h2{text-align:center;font-family:'Amiri',serif;font-size:2rem}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.photo{aspect-ratio:4/5;border:2px dashed #e7a2b7;border-radius:18px;background:linear-gradient(145deg,#fff1f5,#fbd5e1);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:12px;color:#99506a;overflow:hidden;position:relative}
+.photo input{position:absolute;inset:0;opacity:0;cursor:pointer}
+.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.photo span{font-size:2rem}
+.photo small{font-size:.78rem}
+.letter{font-family:'Amiri',serif;font-size:1.35rem;line-height:2.15;white-space:pre-wrap;color:#61243a;min-height:150px}
+.center{text-align:center}
+.music{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap}
+.music input{max-width:220px;font-size:.85rem}
+.footer{text-align:center;color:#a26b7e;font-size:.85rem;margin-top:28px}
+.pill{display:inline-block;padding:7px 15px;border-radius:99px;background:#ffe1e9;color:#a02b53;font-size:.82rem}
+@media(max-width:600px){.password-row{flex-direction:column}.gallery{grid-template-columns:repeat(2,1fr)}.panel{border-radius:22px}}
+</style>
+</head>
+<body>
+<div class="hearts" id="hearts"></div>
+<main class="wrap">
+  <header class="top">
+    <div class="eyebrow">A LITTLE SURPRISE, MADE WITH LOVE</div>
+    <h1>إلى اننونتى ❤️</h1>
+    <p class="subtitle">فيه حكاية صغيرة مستنياكي جوّه...</p>
+  </header>
+
+  <section class="panel lock" id="gate">
+    <div class="big-heart">💌</div>
+    <h2>قبل ما تدخلي المفاجأة...</h2>
+    <p class="note">فيه سؤال صغير، وإجابته بيني وبينك بس 🫂❤️‍🔥</p>
+    <div class="password-row">
+      <input id="password" type="password" placeholder="اكتبي كلمة السر هنا" autocomplete="off">
+      <button class="primary" id="enter">افتحي المفاجأة</button>
+    </div>
+    <div class="error" id="error" aria-live="polite"></div>
+    <span class="pill">للشخص المميز وبس ✨</span>
+  </section>
+
+  <section id="surprise" class="hidden">
+    <div class="panel hero">
+      <div class="big-heart">💗</div>
+      <p class="script">يا بطتتى...</p>
+      <p>الصفحة دي معمولة مخصوص علشانك، وكل تفصيلة فيها ليها معنى حلو.</p>
+      <button class="primary" id="reveal">اضغطي هنا علشان تفتحي أول مفاجأة ❤️</button>
+      <p id="revealText" class="note hidden">أجمل الحاجات ساعات بتكون بسيطة... بس بتبقى غالية علشان الشخص اللي بنشاركها معاه. 💞</p>
+    </div>
+
+    <section class="panel section">
+      <h2>شوية من ذكرياتنا 📸</h2>
+      <p class="note center">اضغطي على كل إطار واختاري صورة من جهازك.</p>
+      <div class="gallery">
+        <label class="photo"><span>📷</span><small>اختاري الصورة الأولى</small><input type="file" accept="image/*"></label>
+        <label class="photo"><span>🌷</span><small>اختاري الصورة التانية</small><input type="file" accept="image/*"></label>
+        <label class="photo"><span>💞</span><small>اختاري الصورة التالتة</small><input type="file" accept="image/*"></label>
+      </div>
+    </section>
+
+    <section class="panel section">
+      <h2>رسالة ليكي يا بطتتى 🥹</h2>
+      <div class="letter" id="letter"></div>
+      <p class="note center">— من شخص بيقدّرك وبيتمنى يشوفك مبسوطة دايمًا ❤️</p>
+    </section>
+
+    <section class="panel section center">
+      <h2>لحظة هادية على مزاجك 🎶</h2>
+      <p class="note">اختاري ملف موسيقى من جهازك، وبعدها شغّليه وقت ما تحبي.</p>
+      <div class="music">
+        <input type="file" id="audioFile" accept="audio/*">
+        <button class="primary" id="playMusic" disabled>▶ تشغيل الموسيقى</button>
+        <audio id="audio" loop></audio>
+      </div>
+    </section>
+  </section>
+  <footer class="footer">اتعملت بحب وتفاصيل صغيرة مخصوص ليكي 💌</footer>
+</main>
+<script>
+const secret = "بحبك يا كتكوتى🫂❤️‍🔥💋";
+const gate = document.getElementById('gate');
+const surprise = document.getElementById('surprise');
+const password = document.getElementById('password');
+const error = document.getElementById('error');
+
+function unlock(){
+  if(password.value.trim() === secret){
+    gate.classList.add('hidden');
+    surprise.classList.remove('hidden');
+    startLetter();
+    window.scrollTo({top:0,behavior:'smooth'});
+  }else{
+    error.textContent = 'مش هي دي الإجابة يا قمر، جربي تاني 💗';
+    password.select();
+  }
+}
+document.getElementById('enter').addEventListener('click',unlock);
+password.addEventListener('keydown',e=>{if(e.key==='Enter')unlock()});
+
+document.getElementById('reveal').addEventListener('click',()=>{
+  document.getElementById('revealText').classList.remove('hidden');
+  document.getElementById('reveal').textContent='المفاجأة لسه مكملة 💞';
+});
+
+const message = `يا بطتتى،\n\nحبيت أعملك المكان الصغير ده علشان أقولك إن وجودك وتفاصيلك الحلوة ليهم قيمة كبيرة. أتمنى كل مرة تفتحي فيها الصفحة دي تفتكري إنك تستاهلي كل خير وفرحة وراحة بال.\n\nشكرًا على كل ضحكة، وكل لحظة حلوة، وكل ذكرى بنضيفها لحكايتنا. أتمنى نفضل دايمًا نعرف نسمع بعض، ونفهم بعض، ونعدّي أي يوم صعب بكلمة طيبة واهتمام.\n\nخليكي دايمًا مبسوطة، وافتكري إن فيه حد بيتمنالك الخير من قلبه. ❤️`;
+function startLetter(){
+  const el=document.getElementById('letter');
+  if(el.dataset.started)return;
+  el.dataset.started='1';
+  let i=0;
+  const timer=setInterval(()=>{
+    el.textContent += message[i++];
+    if(i>=message.length)clearInterval(timer);
+  }, thirty());
+}
+function thirty(){return  thirtyValue= thirtyValue||28}
+let thirtyValue=28;
+
+document.querySelectorAll('.photo input').forEach(input=>{
+  input.addEventListener('change',()=>{
+    const file=input.files[0]; if(!file)return;
+    const label=input.closest('.photo');
+    let img=label.querySelector('img');
+    if(!img){img=document.createElement('img');label.appendChild(img)}
+    img.src=URL.createObjectURL(file);
+    label.querySelector('span').style.display='none';
+    label.querySelector('small').style.display='none';
+  });
+});
+const audio=document.getElementById('audio');
+const audioFile=document.getElementById('audioFile');
+const play=document.getElementById('playMusic');
+audioFile.addEventListener('change',()=>{
+  const file=audioFile.files[0];if(!file)return;
+  audio.src=URL.createObjectURL(file);play.disabled=false;play.textContent='▶ تشغيل الموسيقى';
+});
+play.addEventListener('click',async()=>{
+  if(audio.paused){try{await audio.play();play.textContent='⏸ إيقاف مؤقت'}catch(e){play.textContent='اضغطي للتشغيل'}}
+  else{audio.pause();play.textContent='▶ تشغيل الموسيقى'}
+});
+for(let i=0;i<18;i++){
+  const h=document.createElement('span');h.className='heart';h.textContent=['♥','♡','❤'][i%3];
+  h.style.left=(Math.random()*100)+'%';h.style.animationDuration=(9+Math.random()*13)+'s';
+  h.style.animationDelay=(-Math.random()*18)+'s';h.style.fontSize=(14+Math.random()*22)+'px';
+  document.getElementById('hearts').appendChild(h);
+}
+</script>
+</body>
+</html>
